@@ -58,7 +58,38 @@ avec ce site : `https://shekone007.github.io/facturfacile/`.
 - LinkedIn + Reddit (r/Maroc) + WhatsApp Business
 - La TVA au Maroc est passée à **20 %** par défaut (déjà le réglage par défaut ici ✅)
 
+## 🌍 Vendre à l'INTERNATIONNAL depuis le Maroc
+
+Le site est **trilingue (🇫🇷 FR / 🇬🇧 EN / 🇪🇸 ES)** → vos 3 marchés :
+francophone (Maroc, France, Afrique), anglophone (monde entier), hispanophone (Amérique latine, Espagne).
+
+### Où encaisser les paiements internationaux (depuis le Maroc)
+| Plateforme | Avantage | Payout vers le Maroc |
+|---|---|---|
+| **Payoneer** ✅✅ | Le standard au Maroc : reçoit USD/EUR/GBP comme un compte bancaire US/UE | Retrait guichet + carte Mastercard |
+| **Paddle** ✅ | Vendeur "marchand" : gère TVA/impôts à votre place pour vous | Virement (Wire) → compte Payoneer |
+| **Gumroad** ✅ | Zéro code : ils vendent la licence PRO à votre place | PayPal (limité) / virement |
+| **Stripe Atlas** ⭐ | Crée une société US ($500 une fois) → vendre partout | Nécessite un compte US (Mercury) |
+
+### Plan d'action concret (par ordre)
+1. **Créez Payoneer** (gratuit) → payoneer.com → sert de banque universelle
+2. **Publiez la version PRO sur Paddle ou Gumroad** (gratuit à l'inscription, commission ~5 %)
+3. **Collez le lien de paiement** dans `index.html` → recherchez `💰 Remplacez # par votre lien`
+4. **Déposez le site sur :**
+   - **Product Hunt** (tech, États-Unis) → explosif pour le trafic
+   - **Gumroad Discover** (place de marché gratuite)
+   - **Reddit** : r/SideProject, r/Entrepreneur, r/freelance
+   - **Facebook Groups** : freelances Maroc / France / Afrique
+5. **SEO international** : article anglais *« free invoice generator »* (marché énorme)
+
+### Conseils Maroc ↔ International
+- Prix internationaux en **$** (rassure l'acheteur) : 4,90 $/mois ≈ 49 DH ✅
+- Factures clients étrangers : **TVA 0 %** (autoliquidation hors Maroc) 🇲🇦
+- Un client étranger qui paie 4,90 $ vous revient à ~49 DH via Payoneer (frais ~1 %)
+- Objectif réaliste : **100 clients PRO = ~2 400 DH/mois récurrents** 💪
+
 ## ⚠️ À savoir
-Aucune application ne "gagne de l'argent" automatiquement : le revenu vient du **trafic**.
-Suite logique : affiliations → 1 000 visites/mois → AdSense → version PRO.
-Objectif réaliste : **300–1 500 DH/mois** à partir du 3e mois si vous publiez régulièrement.
+Aucune application ne gagne de l'argent automatiquement : le revenu vient du **trafic**.
+Mettez le lien de paiement, publiez sur Product Hunt + Reddit, et publiez du contenu SEO chaque semaine.
+
+

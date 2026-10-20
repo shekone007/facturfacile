@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FacturFacile – Générateur gratuit de devis et factures</title>
-  <meta name="description" content="Créez et imprimez vos devis et factures gratuitement, en ligne et sans inscription.">
+  <title>FacturFacile – Générateur gratuit de devis et factures | Free invoice maker</title>
+  <meta name="description" content="Créez et imprimez vos devis et factures gratuitement. Create professional invoices online, free.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,8 +13,12 @@
     <div class="container header-inner">
       <div class="logo">🧾 Factur<span>Facile</span></div>
       <nav>
-        <a href="#aide">Aide</a>
-        <a href="#monetisation" class="btn-cta">Passer à la version PRO</a>
+        <div class="lang-switch">
+          <button id="langFr" class="active" onclick="setLang('fr')">🇫🇷 FR</button>
+          <button id="langEn" onclick="setLang('en')">🇬🇧 EN</button>
+          <button id="langEs" onclick="setLang('es')">🇪🇸 ES</button>
+        </div>
+        <a href="#pricing" class="btn-cta" data-i18n="nav.pro">Passer à la version PRO</a>
       </nav>
     </div>
   </header>
@@ -22,11 +26,11 @@
   <main class="container">
 
     <section class="hero no-print">
-      <h1>Créez vos devis et factures en 2 minutes</h1>
-      <p>Gratuit, sans inscription, tout reste dans votre navigateur.</p>
+      <h1 data-i18n="hero.title">Créez vos devis et factures en 2 minutes</h1>
+      <p data-i18n="hero.sub">Gratuit, sans inscription, tout reste dans votre navigateur.</p>
       <div class="type-switch">
-        <button id="btnDevis" class="active" onclick="setType('devis')">Devis</button>
-        <button id="btnFacture" onclick="setType('facture')">Facture</button>
+        <button id="btnDevis" class="active" onclick="setType('devis')" data-i18n="type.devis">Devis</button>
+        <button id="btnFacture" onclick="setType('facture')" data-i18n="type.facture">Facture</button>
       </div>
     </section>
 
@@ -35,8 +39,8 @@
 
       <div class="doc-head">
         <div class="block sender">
-          <label>Votre entreprise / nom</label>
-          <textarea id="expediteur" rows="4" placeholder="Jean Dupont&#10;12 rue de la Paix&#10;75001 Paris&#10;SIRET : 000 000 000 00000&#10;contact@monsite.fr">Jean Dupont
+          <label data-i18n="doc.you">Votre entreprise / nom</label>
+          <textarea id="expediteur" rows="4">Jean Dupont
 12 rue de la Paix
 75001 Paris
 SIRET : 000 000 000 00000
@@ -45,14 +49,14 @@ contact@monsite.fr</textarea>
 
         <div class="block doctype">
           <h2 id="docTitle">DEVIS</h2>
-          <p>N° <input id="numero" type="text" value="DEV-2026-001" size="14"></p>
-          <p>Date <input id="date" type="date"></p>
+          <p><span data-i18n="doc.num">N°</span> <input id="numero" type="text" value="DEV-2026-001" size="14"></p>
+          <p><span data-i18n="doc.date">Date</span> <input id="date" type="date"></p>
         </div>
       </div>
 
       <div class="block client">
-        <label>Client</label>
-        <textarea id="client" rows="4" placeholder="Nom du client&#10;Adresse&#10;Email">Entreprise client
+        <label data-i18n="doc.client">Client</label>
+        <textarea id="client" rows="4">Entreprise client
 4 avenue des Champs
 75008 Paris</textarea>
       </div>
@@ -60,59 +64,99 @@ contact@monsite.fr</textarea>
       <table class="lines">
         <thead>
           <tr>
-            <th>Désignation</th>
-            <th>Qté</th>
-            <th>P.U. HT</th>
-            <th>TVA %</th>
-            <th>Total HT</th>
+            <th data-i18n="col.desc">Désignation</th>
+            <th data-i18n="col.qty">Qté</th>
+            <th data-i18n="col.pu">P.U. HT</th>
+            <th data-i18n="col.tva">TVA %</th>
+            <th data-i18n="col.total">Total HT</th>
             <th class="no-print"></th>
           </tr>
         </thead>
         <tbody id="linesBody"></tbody>
       </table>
-      <button class="add-line no-print" onclick="addLine()">+ Ajouter une ligne</button>
+      <button class="add-line no-print" onclick="addLine()" data-i18n="lines.add">+ Ajouter une ligne</button>
 
       <div class="totals">
-        <div class="row"><span>Total HT</span><strong id="totalHT">0,00 €</strong></div>
-        <div class="row"><span>TVA</span><strong id="totalTVA">0,00 €</strong></div>
-        <div class="row grand"><span>Total TTC</span><strong id="totalTTC">0,00 €</strong></div>
+        <div class="row"><span data-i18n="tot.ht">Total HT</span><strong id="totalHT">0,00 DH</strong></div>
+        <div class="row"><span>TVA</span><strong id="totalTVA">0,00 DH</strong></div>
+        <div class="row grand"><span data-i18n="tot.ttc">Total TTC</span><strong id="totalTTC">0,00 DH</strong></div>
       </div>
 
       <div class="block notes">
-        <label>Conditions / notes</label>
+        <label data-i18n="doc.notes">Conditions / notes</label>
         <textarea id="notes" rows="2">Paiement à réception de facture – RIB/IBAN : 000 000000 000000000000 00 – ICE : 000000000000000</textarea>
       </div>
     </section>
     <!-- ===== FIN ZONE MODIFIABLE ===== -->
 
     <section class="actions no-print">
-      <label class="currency-box">Devise
+      <label class="currency-box"><span data-i18n="act.currency">Devise</span>
         <select id="currency" onchange="setCurrency(this.value)">
           <option value="DH" selected>DH (Dirham – Maroc)</option>
           <option value="€">€ (Euro)</option>
           <option value="$">$ (Dollar)</option>
         </select>
       </label>
-      <button class="btn primary" onclick="window.print()">🖨️ Imprimer / Enregistrer en PDF</button>
-      <button class="btn" onclick="saveLocal()">💾 Enregistrer</button>
-      <button class="btn" onclick="loadLocal()">📂 Ouvrir</button>
-      <button class="btn danger" onclick="resetDoc()">♻️ Nouveau document</button>
+      <button class="btn primary" onclick="window.print()" data-i18n="act.print">🖨️ Imprimer / Enregistrer en PDF</button>
+      <button class="btn" onclick="saveLocal()" data-i18n="act.save">💾 Enregistrer</button>
+      <button class="btn" onclick="loadLocal()" data-i18n="act.open">📂 Ouvrir</button>
+      <button class="btn danger" onclick="resetDoc()" data-i18n="act.reset">♻️ Nouveau document</button>
+    </section>
+
+    <!-- ===== SECTION TARIFS (monétisation) ===== -->
+    <section class="pricing no-print" id="pricing">
+      <h2 data-i18n="price.title">Passez à la version PRO</h2>
+      <p class="price-sub" data-i18n="price.sub">Paiement international sécurisé – Payoneer, carte bancaire ou virement.</p>
+
+      <div class="price-cards">
+        <div class="card">
+          <h3 data-i18n="price.free.name">Gratuit</h3>
+          <div class="amount">0</div>
+          <ul>
+            <li data-i18n="price.f1">Devis & factures illimités</li>
+            <li data-i18n="price.f2">Export PDF</li>
+            <li data-i18n="price.f3">3 devises (DH, €, $)</li>
+          </ul>
+          <button class="btn" onclick="document.getElementById('document').scrollIntoView()" data-i18n="price.free.btn">Utiliser gratuitement</button>
+        </div>
+
+        <div class="card featured">
+          <div class="badge" data-i18n="price.badge">POPULAIRE</div>
+          <h3>PRO</h3>
+          <div class="amount">4,90 $<small data-i18n="price.month">/mois</small></div>
+          <ul>
+            <li data-i18n="price.p1">Logo & couleurs personnalisés</li>
+            <li data-i18n="price.p2">Clients enregistrés</li>
+            <li data-i18n="price.p3">Export PDF en lot</li>
+            <li data-i18n="price.p4">Support prioritaire</li>
+          </ul>
+          <!-- 💰 Remplacez # par votre lien Gumroad / Paddle / PayPal -->
+          <button class="btn primary" onclick="alert(window.I18N[lang].paySoon)" id="btnPro">🚀 <span data-i18n="price.pro.btn">S'abonner</span></button>
+        </div>
+
+        <div class="card">
+          <h3>ENTREPRISE</h3>
+          <div class="amount">14,90 $<small data-i18n="price.month">/mois</small></div>
+          <ul>
+            <li data-i18n="price.b1">Tout le PRO</li>
+            <li data-i18n="price.b2">Multi-utilisateurs (5)</li>
+            <li data-i18n="price.b3">API & intégrations</li>
+          </ul>
+          <button class="btn" onclick="alert(window.I18N[lang].paySoon)" data-i18n="price.ent.btn">Contacter l'équipe</button>
+        </div>
+      </div>
+      <p class="pay-note" data-i18n="price.note">💡 Depuis le Maroc : Payoneer · CIH Pay · Western Union · Virement international</p>
     </section>
 
     <section class="help no-print" id="aide">
-      <h2>Comment ça marche ?</h2>
+      <h2 data-i18n="help.title">Comment ça marche ?</h2>
       <ol>
-        <li>Remplissez vos informations et celles du client.</li>
-        <li>Ajoutez vos lignes (désignation, quantité, prix).</li>
-        <li>Cliquez sur <strong>Imprimer</strong>, puis choisissez « Enregistrer en PDF ».</li>
-        <li>Envoyez le PDF à votre client. C'est prêt !</li>
+        <li data-i18n="help.s1">Remplissez vos informations et celles du client.</li>
+        <li data-i18n="help.s2">Ajoutez vos lignes (désignation, quantité, prix).</li>
+        <li data-i18n="help.s3">Cliquez sur « Imprimer », puis choisissez « Enregistrer en PDF ».</li>
+        <li data-i18n="help.s4">Envoyez le PDF à votre client. C'est prêt !</li>
       </ol>
-      <p class="info">ℹ️ Aucune donnée n'est envoyée sur Internet : tout est stocké dans votre navigateur.</p>
-    </section>
-
-    <section class="help no-print" id="monetisation">
-      <h2>Version PRO (à venir)</h2>
-      <p>Le logo, les modèles de couleurs et l'export en lot seront proposés en abonnement.</p>
+      <p class="info" data-i18n="help.info">ℹ️ Aucune donnée n'est envoyée sur Internet : tout est stocké dans votre navigateur.</p>
     </section>
 
   </main>
@@ -123,9 +167,9 @@ contact@monsite.fr</textarea>
         <!-- 💰 MONÉTISATION : remplacez ces liens par VOS liens d'affiliation -->
         <a href="https://www.hostinger.com/" rel="sponsored nofollow noopener" target="_blank">🌐 Hébergement web</a>
         <a href="https://www.gandi.net/" rel="sponsored nofollow noopener" target="_blank">🔗 Nom de domaine</a>
-        <a href="https://www.payoneer.com/" rel="sponsored nofollow noopener" target="_blank">💳 Encaisser ses revenus (Maroc)</a>
+        <a href="https://www.payoneer.com/" rel="sponsored nofollow noopener" target="_blank">💳 Payoneer</a>
       </p>
-      <p>© 2026 FacturFacile – Générateur gratuit de devis et factures – Maroc 🇲🇦</p>
+      <p>© 2026 FacturFacile – Free invoice & quote maker – Maroc 🇲🇦</p>
     </div>
   </footer>
 
