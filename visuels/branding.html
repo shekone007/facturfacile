@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Branding Facebook – Facturation Pro Maroc</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+    body { background: #cbd5e1; padding: 40px; display: flex; flex-direction: column; align-items: center; gap: 36px; }
+
+    .label { font-size: 15px; color: #334155; font-weight: 700; align-self: flex-start; }
+
+    /* ===== PHOTO DE PROFIL 1080x1080 ===== */
+    .profile {
+      width: 540px; height: 540px; border-radius: 50%;
+      background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      box-shadow: 0 14px 44px rgba(15,23,42,.3); position: relative; overflow: hidden;
+    }
+    .profile::before {
+      content: ""; position: absolute; width: 620px; height: 620px;
+      border: 3px solid rgba(255,255,255,.14); border-radius: 50%;
+    }
+    .profile .ico { font-size: 190px; line-height: 1; margin-bottom: 6px; }
+    .profile .brand { font-size: 44px; font-weight: 800; color: #fff; letter-spacing: -.5px; }
+    .profile .brand span { color: #fde047; }
+    .profile .tag { font-size: 21px; color: #dbeafe; margin-top: 10px; font-weight: 600; letter-spacing: 1px; }
+
+    /* ===== COUVERTURE 1640x624 (= 820x312 à l'échelle 2) ===== */
+    .cover {
+      width: 820px; height: 312px;
+      background: linear-gradient(120deg, #0f172a 0%, #1e3a8a 55%, #2563eb 100%);
+      border-radius: 12px; overflow: hidden; position: relative;
+      box-shadow: 0 14px 44px rgba(15,23,42,.3);
+      display: flex; align-items: center; padding: 0 60px; gap: 40px;
+    }
+    .cover .wave {
+      position: absolute; right: -90px; top: -90px; width: 380px; height: 380px;
+      background: rgba(255,255,255,.05); border-radius: 50%;
+    }
+    .cover .wave2 {
+      position: absolute; right: 40px; bottom: -150px; width: 300px; height: 300px;
+      background: rgba(253,224,71,.08); border-radius: 50%;
+    }
+    .cover-left { flex: 1; position: relative; z-index: 2; }
+    .cover-left .kicker {
+      display: inline-block; background: rgba(253,224,71,.16); color: #fde047;
+      padding: 6px 16px; border-radius: 30px; font-size: 14px; font-weight: 700; margin-bottom: 16px;
+    }
+    .cover-left h1 { font-size: 40px; color: #fff; line-height: 1.1; margin-bottom: 12px; font-weight: 800; }
+    .cover-left h1 span { color: #fde047; }
+    .cover-left p { font-size: 17px; color: #cbd5e1; line-height: 1.5; max-width: 430px; }
+    .cover-right { position: relative; z-index: 2; text-align: center; }
+    .cover-right .big-ico { font-size: 120px; filter: drop-shadow(0 10px 20px rgba(0,0,0,.3)); }
+    .cover-contact {
+      position: absolute; bottom: 22px; left: 60px; right: 60px; z-index: 2;
+      display: flex; gap: 26px; align-items: center;
+      color: #e2e8f0; font-size: 15px; font-weight: 600;
+    }
+    .cover-contact span { display: flex; align-items: center; gap: 7px; }
+  </style>
+</head>
+<body>
+
+  <div class="label">👤 PHOTO DE PROFIL (ronde — s'affiche telle quelle sur Facebook)</div>
+  <div class="profile">
+    <div class="ico">🧾</div>
+    <div class="brand">Facturation <span>Pro</span></div>
+    <div class="tag">MAROC 🇲🇦</div>
+  </div>
+
+  <div class="label">🖼️ PHOTO DE COUVERTURE (format Facebook 1640 × 624)</div>
+  <div class="cover">
+    <div class="wave"></div>
+    <div class="wave2"></div>
+    <div class="cover-left">
+      <div class="kicker">POUR FREELANCES & ARTISANS</div>
+      <h1>Vos factures pro,<br>prêtes en <span>2 minutes</span></h1>
+      <p>TVA marocaine incluse · PDF prêt à envoyer · À partir de 50 DH</p>
+    </div>
+    <div class="cover-right">
+      <div class="big-ico">🧾</div>
+    </div>
+    <div class="cover-contact">
+      <span>📲 06 02 16 68 76</span>
+      <span>🌐 shekone007.github.io/facturfacile</span>
+    </div>
+  </div>
+
+</body>
+</html>
