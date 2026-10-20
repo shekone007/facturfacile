@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Visuels Facebook – Facturation Pro Maroc</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+    body { background: #e2e8f0; padding: 40px; }
+    .wrap { display: flex; flex-wrap: wrap; gap: 40px; justify-content: center; }
+    .label { width: 100%; font-size: 15px; color: #475569; margin-bottom: 8px; font-weight: 600; }
+    .card-box { display: flex; flex-direction: column; }
+
+    /* Visuel carré 1080x1080 (post Facebook) */
+    .post {
+      width: 540px; height: 540px; border-radius: 14px; overflow: hidden;
+      box-shadow: 0 12px 40px rgba(15,23,42,.25); display: flex; flex-direction: column;
+      padding: 44px; color: #fff; position: relative;
+    }
+    .post.blue { background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%); }
+    .post.green { background: linear-gradient(135deg, #064e3b 0%, #10b981 100%); }
+    .post.dark { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); }
+
+    .post .ico { font-size: 64px; margin-bottom: 20px; }
+    .post h1 { font-size: 40px; line-height: 1.15; margin-bottom: 18px; font-weight: 800; }
+    .post h1 span { color: #fde047; }
+    .post .sub { font-size: 19px; opacity: .92; line-height: 1.5; margin-bottom: 24px; flex: 1; }
+    .post .list { list-style: none; margin-bottom: 24px; }
+    .post .list li { font-size: 17px; padding: 5px 0; }
+    .post .cta {
+      background: #fde047; color: #0f172a; padding: 16px 26px; border-radius: 12px;
+      font-size: 20px; font-weight: 800; text-align: center; display: inline-block; align-self: flex-start;
+    }
+    .post .price { font-size: 56px; font-weight: 800; color: #fde047; line-height: 1; margin-bottom: 6px; }
+    .post .price small { font-size: 22px; color: #fff; font-weight: 500; }
+    .post .footer-bar {
+      position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,.25);
+      padding: 16px 44px; font-size: 16px; display: flex; justify-content: space-between; align-items: center;
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="card-box">
+    <div class="label">🎨 VISUEL 1 — Présentation du service (à utiliser pour vos posts principaux)</div>
+    <div class="post blue">
+      <div class="ico">🧾</div>
+      <h1>Facturez comme<br>un <span>professionnel</span></h1>
+      <ul class="list">
+        <li>✅ Fait en 2 minutes</li>
+        <li>✅ TVA marocaine incluse</li>
+        <li>✅ PDF prêt à envoyer</li>
+      </ul>
+      <div class="price">50 DH <small>/ facture</small></div>
+      <div class="cta">📲 WhatsApp : 06 75 94 65 53</div>
+      <div class="footer-bar"><span>Facturation Pro Maroc</span><span>🇲🇦</span></div>
+    </div>
+  </div>
+
+  <div class="card-box">
+    <div class="label">🎨 VISUEL 2 — Offre Pack (pour les clients réguliers)</div>
+    <div class="post green">
+      <div class="ico">📦</div>
+      <h1>Pack <span>Factures</span><br>économique</h1>
+      <div class="sub">Vous facturez souvent ? Prenez le pack et économisez :</div>
+      <ul class="list">
+        <li>📄 5 documents → <strong>200 DH</strong></li>
+        <li>📄 10 documents → <strong>350 DH</strong></li>
+      </ul>
+      <div class="cta">📲 Commandez maintenant</div>
+      <div class="footer-bar"><span>Facturation Pro Maroc</span><span>06 75 94 65 53</span></div>
+    </div>
+  </div>
+
+  <div class="card-box">
+    <div class="label">🎨 VISUEL 3 — Outil gratuit (pour attirer du monde)</div>
+    <div class="post dark">
+      <div class="ico">🎁</div>
+      <h1>Faites-le<br><span>vous-même</span><br>gratuitement</h1>
+      <div class="sub">Notre outil en ligne crée vos factures en 2 minutes. Sans inscription.</div>
+      <ul class="list">
+        <li>🌐 shekone007.github.io/facturfacile</li>
+      </ul>
+      <div class="cta">👉 Essayez gratuitement</div>
+      <div class="footer-bar"><span>Facturation Pro Maroc</span><span>🇲🇦 Gratuit</span></div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
