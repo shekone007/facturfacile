@@ -3,9 +3,17 @@
    Tout se passe dans le navigateur (aucun serveur).
    ===================================================== */
 
-// ---------- Format monétaire français ----------
+// ---------- Devise (DH pour le Maroc par défaut) ----------
+let devise = 'DH';
+
+function setCurrency(v) {
+  devise = v;
+  calc();
+}
+
+// ---------- Format monétaire ----------
 const eur = (n) =>
-  n.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
+  n.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' ' + devise;
 
 // ---------- Type de document (devis / facture) ----------
 function setType(type) {
@@ -74,6 +82,7 @@ function collectData() {
     numero:     document.getElementById('numero').value,
     date:       document.getElementById('date').value,
     notes:      document.getElementById('notes').value,
+    devise,
     lignes,
   };
 }
@@ -97,6 +106,11 @@ function applyData(d) {
   document.getElementById('date').value       = d.date || '';
   document.getElementById('notes').value      = d.notes || '';
   document.getElementById('docTitle').textContent = d.type || 'DEVIS';
+
+  if (d.devise) {
+    devise = d.devise;
+    document.getElementById('currency').value = devise;
+  }
 
   document.getElementById('linesBody').innerHTML = '';
   (d.lignes || []).forEach((l) => addLine(l.desc, l.qty, l.pu, l.tva));

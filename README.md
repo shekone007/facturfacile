@@ -26,32 +26,39 @@ Aucune installation, aucun serveur nécessaire.
 
 ⏱️ Total : ~15 minutes, 0 €.
 
-## 💰 Plan de monétisation (par ordre d'efficacité)
+## 💰 Plan de monétisation – version MAROC 🇲🇦
 
 ### Étape 1 – Affiliation (revenus dès le 1er visiteur)
-Ajoutez dans le footer des liens d'affiliation vers des outils que vos visiteurs
-utilisent déjà (hébergement, nom de domaine, logiciel de comptabilité) :
-- **OVH / Hostinger** – jusqu'à 100 € par commande
-- **Ovhcloud, PlanetScale…** programmes d'affiliation
-- **Notion, Wave Compta** – programmes partenaires
+Ajoutez **vos** identifiants d'affiliation dans le footer (`index.html`, recherchez `MONÉTISATION`) :
+- **Hostinger** (hébergement) : programme accepté au Maroc, paie par **virement bancaire ou Payoneer** → https://www.hostinger.com/affiliates
+- **Gandi / Namecheap** (noms de domaine) : commissions récurrentes
+- ⚠️ **Amazon Associates n'accepte PAS le Maroc** → préférez Hostinger, CJ Affiliate ou Impact.
 
-### Étape 2 – Publicité (dès ~1 000 visites/mois)
-Inscrivez le site à **Google AdSense** une fois le trafic installé.
-Compléments : *Ezoic*, *Mediavine* (dès 50k visites/mois).
+### Étape 2 – Publicité Google AdSense (dès ~1 000 visites/mois)
+AdSense **fonctionne au Maroc** : l'adresse postale marocaine est acceptée et le paiement
+se fait par **chèque ou virement** (dès 100 $). Créez le compte sur https://adsense.google.com
+avec ce site : `https://shekone007.github.io/facturfacile/`.
 
-### Étape 3 – Version PRO (revenus récurrents 🚀)
-Version gratuite = trafic. Version payante = argent :
-- Logo + couleurs personnalisés
-- Export PDF en lot, clients enregistrés
-- **Prix conseillé : 4,99 €/mois** via **Gumroad** ou **Lemon Squeezy**
-  (ils gèrent la facturation, vous n'avez rien à coder)
+### Étape 3 – Encaisser ses revenus AU MAROC
+| Moyen | Usage |
+|---|---|
+| **Payoneer** ✅ | Recommandé : reçu des affiliations et clients internationaux, retrait aux guichets au Maroc ou carte Mastercard |
+| **Virement bancaire** (CIH, Attijariwafa, BMCE) | Pour Adense et clients locaux |
+| **Western Union / MoneyGram** | Paiements ponctuels de clients |
+| ❌ PayPal | Très limité au Maroc : ne comptez pas dessus |
 
-### Étape 4 – Trafic gratuit
-- Publiez un article de blog : *"Modèle de devis freelance (2026)"* → SEO
-- Partagez sur Reddit (r/freelance, r/france), LinkedIn, Facebook
-- Ajoutez le lien dans votre signature d'e-mail
+### Étape 4 – Version PRO payante (revenus récurrents 🚀)
+- **Gumroad / Payhip** : vendent la licence PRO à votre place (leurs liens marchent au Maroc)
+- Paiement local : **paiement par virement RIB** ou **CIH Pay / Cashplus** – très courant au Maroc
+- **Prix conseillé : 49 DH/mois ou 490 DH/an** (adapté au pouvoir d'achat local)
+
+### Étape 5 – Trafic gratuit (marché francophone Maroc/Afrique)
+- Article SEO : *« modèle de devis freelance Maroc 2026 »*, *« facture ICE obligatoire »*
+- Groupes Facebook marocains : freelances, indépendants, TPE/PME
+- LinkedIn + Reddit (r/Maroc) + WhatsApp Business
+- La TVA au Maroc est passée à **20 %** par défaut (déjà le réglage par défaut ici ✅)
 
 ## ⚠️ À savoir
-Aucune application ne "gagne de l'argent" automatiquement : le revenu vient du
-**trafic**. La suite logique : héberger → 1 000 visites/mois → affiliation →
-AdSense → version PRO. Objectif réaliste : **50–300 €/mois** à partir du 3e mois.
+Aucune application ne "gagne de l'argent" automatiquement : le revenu vient du **trafic**.
+Suite logique : affiliations → 1 000 visites/mois → AdSense → version PRO.
+Objectif réaliste : **300–1 500 DH/mois** à partir du 3e mois si vous publiez régulièrement.

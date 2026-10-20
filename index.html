@@ -80,12 +80,19 @@ contact@monsite.fr</textarea>
 
       <div class="block notes">
         <label>Conditions / notes</label>
-        <textarea id="notes" rows="2">Paiement à réception de facture – IBAN : FR76 0000 0000 0000 0000 0000 000</textarea>
+        <textarea id="notes" rows="2">Paiement à réception de facture – RIB/IBAN : 000 000000 000000000000 00 – ICE : 000000000000000</textarea>
       </div>
     </section>
     <!-- ===== FIN ZONE MODIFIABLE ===== -->
 
     <section class="actions no-print">
+      <label class="currency-box">Devise
+        <select id="currency" onchange="setCurrency(this.value)">
+          <option value="DH" selected>DH (Dirham – Maroc)</option>
+          <option value="€">€ (Euro)</option>
+          <option value="$">$ (Dollar)</option>
+        </select>
+      </label>
       <button class="btn primary" onclick="window.print()">🖨️ Imprimer / Enregistrer en PDF</button>
       <button class="btn" onclick="saveLocal()">💾 Enregistrer</button>
       <button class="btn" onclick="loadLocal()">📂 Ouvrir</button>
@@ -112,7 +119,13 @@ contact@monsite.fr</textarea>
 
   <footer class="site-footer no-print">
     <div class="container">
-      <p>© 2026 FacturFacile – Générateur gratuit de devis et factures.</p>
+      <p class="footer-links">
+        <!-- 💰 MONÉTISATION : remplacez ces liens par VOS liens d'affiliation -->
+        <a href="https://www.hostinger.com/" rel="sponsored nofollow noopener" target="_blank">🌐 Hébergement web</a>
+        <a href="https://www.gandi.net/" rel="sponsored nofollow noopener" target="_blank">🔗 Nom de domaine</a>
+        <a href="https://www.payoneer.com/" rel="sponsored nofollow noopener" target="_blank">💳 Encaisser ses revenus (Maroc)</a>
+      </p>
+      <p>© 2026 FacturFacile – Générateur gratuit de devis et factures – Maroc 🇲🇦</p>
     </div>
   </footer>
 
