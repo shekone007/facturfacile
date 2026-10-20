@@ -80,7 +80,7 @@ Le bouton **« Payer maintenant »** affiche un modale avec :
 - **WhatsApp + e-mail** pour envoyer la preuve de paiement
 
 ✏️ **À personnaliser (5 min) :** dans `index.html`, remplacez :
-- `000 000000 000000000000 00` → votre vrai RIB CIH/Attijariwafa
+- Votre RIB intégré dans le site ✅
 - `212600000000` (WhatsApp) → votre numéro
 - `contact@monsite.fr` → votre e-mail
 - L'ICE est **facultatif** pour l'instant : ajoutez-le dès que vous l'aurez obtenu (gratuit, voir plus bas)
