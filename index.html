@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FacturFacile – Générateur gratuit de devis et factures</title>
+  <meta name="description" content="Créez et imprimez vos devis et factures gratuitement, en ligne et sans inscription.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header no-print">
+    <div class="container header-inner">
+      <div class="logo">🧾 Factur<span>Facile</span></div>
+      <nav>
+        <a href="#aide">Aide</a>
+        <a href="#monetisation" class="btn-cta">Passer à la version PRO</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="hero no-print">
+      <h1>Créez vos devis et factures en 2 minutes</h1>
+      <p>Gratuit, sans inscription, tout reste dans votre navigateur.</p>
+      <div class="type-switch">
+        <button id="btnDevis" class="active" onclick="setType('devis')">Devis</button>
+        <button id="btnFacture" onclick="setType('facture')">Facture</button>
+      </div>
+    </section>
+
+    <!-- ===== ZONE MODIFIABLE ===== -->
+    <section class="paper" id="document">
+
+      <div class="doc-head">
+        <div class="block sender">
+          <label>Votre entreprise / nom</label>
+          <textarea id="expediteur" rows="4" placeholder="Jean Dupont&#10;12 rue de la Paix&#10;75001 Paris&#10;SIRET : 000 000 000 00000&#10;contact@monsite.fr">Jean Dupont
+12 rue de la Paix
+75001 Paris
+SIRET : 000 000 000 00000
+contact@monsite.fr</textarea>
+        </div>
+
+        <div class="block doctype">
+          <h2 id="docTitle">DEVIS</h2>
+          <p>N° <input id="numero" type="text" value="DEV-2026-001" size="14"></p>
+          <p>Date <input id="date" type="date"></p>
+        </div>
+      </div>
+
+      <div class="block client">
+        <label>Client</label>
+        <textarea id="client" rows="4" placeholder="Nom du client&#10;Adresse&#10;Email">Entreprise client
+4 avenue des Champs
+75008 Paris</textarea>
+      </div>
+
+      <table class="lines">
+        <thead>
+          <tr>
+            <th>Désignation</th>
+            <th>Qté</th>
+            <th>P.U. HT</th>
+            <th>TVA %</th>
+            <th>Total HT</th>
+            <th class="no-print"></th>
+          </tr>
+        </thead>
+        <tbody id="linesBody"></tbody>
+      </table>
+      <button class="add-line no-print" onclick="addLine()">+ Ajouter une ligne</button>
+
+      <div class="totals">
+        <div class="row"><span>Total HT</span><strong id="totalHT">0,00 €</strong></div>
+        <div class="row"><span>TVA</span><strong id="totalTVA">0,00 €</strong></div>
+        <div class="row grand"><span>Total TTC</span><strong id="totalTTC">0,00 €</strong></div>
+      </div>
+
+      <div class="block notes">
+        <label>Conditions / notes</label>
+        <textarea id="notes" rows="2">Paiement à réception de facture – IBAN : FR76 0000 0000 0000 0000 0000 000</textarea>
+      </div>
+    </section>
+    <!-- ===== FIN ZONE MODIFIABLE ===== -->
+
+    <section class="actions no-print">
+      <button class="btn primary" onclick="window.print()">🖨️ Imprimer / Enregistrer en PDF</button>
+      <button class="btn" onclick="saveLocal()">💾 Enregistrer</button>
+      <button class="btn" onclick="loadLocal()">📂 Ouvrir</button>
+      <button class="btn danger" onclick="resetDoc()">♻️ Nouveau document</button>
+    </section>
+
+    <section class="help no-print" id="aide">
+      <h2>Comment ça marche ?</h2>
+      <ol>
+        <li>Remplissez vos informations et celles du client.</li>
+        <li>Ajoutez vos lignes (désignation, quantité, prix).</li>
+        <li>Cliquez sur <strong>Imprimer</strong>, puis choisissez « Enregistrer en PDF ».</li>
+        <li>Envoyez le PDF à votre client. C'est prêt !</li>
+      </ol>
+      <p class="info">ℹ️ Aucune donnée n'est envoyée sur Internet : tout est stocké dans votre navigateur.</p>
+    </section>
+
+    <section class="help no-print" id="monetisation">
+      <h2>Version PRO (à venir)</h2>
+      <p>Le logo, les modèles de couleurs et l'export en lot seront proposés en abonnement.</p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer no-print">
+    <div class="container">
+      <p>© 2026 FacturFacile – Générateur gratuit de devis et factures.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
