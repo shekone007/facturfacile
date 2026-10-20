@@ -3,183 +3,308 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FacturFacile – Générateur gratuit de devis et factures | Free invoice maker</title>
-  <meta name="description" content="Créez et imprimez vos devis et factures gratuitement. Create professional invoices online, free.">
+  <title>FacturFacile – Générateur de factures & devis professionnel | Free invoice maker</title>
+  <meta name="description" content="Créez des factures et devis professionnels en 2 minutes. Gratuit, sans inscription. Free online invoice generator.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- ============ HEADER ============ -->
   <header class="site-header no-print">
     <div class="container header-inner">
-      <div class="logo">🧾 Factur<span>Facile</span></div>
-      <nav>
-        <div class="lang-switch">
-          <button id="langFr" class="active" onclick="setLang('fr')">🇫🇷 FR</button>
-          <button id="langEn" onclick="setLang('en')">🇬🇧 EN</button>
-          <button id="langEs" onclick="setLang('es')">🇪🇸 ES</button>
-        </div>
-        <a href="#pricing" class="btn-cta" data-i18n="nav.pro">Passer à la version PRO</a>
+      <a href="#" class="logo">🧾 Factur<span>Facile</span></a>
+      <nav class="main-nav">
+        <a href="#features" data-i18n="nav.features">Fonctionnalités</a>
+        <a href="#pricing" data-i18n="nav.pricing">Tarifs</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
       </nav>
+      <div class="header-actions">
+        <div class="lang-switch">
+          <button id="langFr" class="active" onclick="setLang('fr')">🇫🇷</button>
+          <button id="langEn" onclick="setLang('en')">🇬🇧</button>
+          <button id="langEs" onclick="setLang('es')">🇪🇸</button>
+        </div>
+        <a href="#pricing" class="btn-cta" data-i18n="nav.pro">Passer à PRO</a>
+      </div>
     </div>
   </header>
 
-  <main class="container">
+  <main>
 
+    <!-- ============ HERO ============ -->
     <section class="hero no-print">
-      <h1 data-i18n="hero.title">Créez vos devis et factures en 2 minutes</h1>
-      <p data-i18n="hero.sub">Gratuit, sans inscription, tout reste dans votre navigateur.</p>
-      <div class="type-switch">
-        <button id="btnDevis" class="active" onclick="setType('devis')" data-i18n="type.devis">Devis</button>
-        <button id="btnFacture" onclick="setType('facture')" data-i18n="type.facture">Facture</button>
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <div class="hero-badge" data-i18n="hero.badge">✨ 100 % gratuit · aucune inscription</div>
+          <h1 data-i18n="hero.title">Facturez comme un pro,<br>en moins de 2 minutes.</h1>
+          <p data-i18n="hero.sub">Créez des factures et devis professionnels, téléchargez-les en PDF et envoyez-les à vos clients. Sans compte, sans limite.</p>
+          <div class="hero-buttons">
+            <a href="#app" class="btn primary big" data-i18n="hero.cta1">Créer ma facture — Gratuit</a>
+            <a href="#features" class="btn ghost" data-i18n="hero.cta2">Voir comment ça marche</a>
+          </div>
+          <ul class="hero-trust">
+            <li data-i18n="trust.s1">🇲🇦 Conçu pour le Maroc</li>
+            <li data-i18n="trust.s2">🔒 100 % privé</li>
+            <li data-i18n="trust.s3">⚡ Instantané</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual">
+          <!-- Miniature de document générée en CSS (aucune image) -->
+          <div class="mini-doc">
+            <div class="mini-head">
+              <div class="mini-lines">
+                <span class="l w60"></span><span class="l w40"></span><span class="l w50"></span>
+              </div>
+              <div class="mini-num">
+                <strong>FACTURE</strong>
+                <span class="l w80"></span>
+                <span class="l w60"></span>
+              </div>
+            </div>
+            <div class="mini-table">
+              <div class="mini-row head"><span></span><span></span><span></span></div>
+              <div class="mini-row"><span class="l w70"></span><span class="l w20"></span><span class="l w30"></span></div>
+              <div class="mini-row"><span class="l w50"></span><span class="l w20"></span><span class="l w30"></span></div>
+              <div class="mini-row"><span class="l w60"></span><span class="l w20"></span><span class="l w30"></span></div>
+            </div>
+            <div class="mini-total">
+              <span data-i18n="mini.ttc">Total TTC</span>
+              <strong>3 592,00 DH</strong>
+            </div>
+            <div class="mini-stamp">✓ PRO</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bandeau chiffres -->
+      <div class="stats-bar">
+        <div class="container stats-inner">
+          <div><strong>0 DH</strong><span data-i18n="stat.1">pour toujours</span></div>
+          <div><strong>2 min</strong><span data-i18n="stat.2">pour une facture</span></div>
+          <div><strong>100 %</strong><span data-i18n="stat.3">dans votre navigateur</span></div>
+          <div><strong>20 %</strong><span data-i18n="stat.4">TVA Maroc réglée</span></div>
+        </div>
       </div>
     </section>
 
-    <!-- ===== ZONE MODIFIABLE ===== -->
-    <section class="paper" id="document">
+    <!-- ============ FONCTIONNALITÉS ============ -->
+    <section class="features no-print" id="features">
+      <div class="container">
+        <h2 class="section-title" data-i18n="feat.title">Tout ce qu'il faut pour facturer sans stress</h2>
+        <p class="section-sub" data-i18n="feat.sub">Un outil pensé pour les freelances, artisans et TPE/PME marocains.</p>
 
-      <div class="doc-head">
-        <div class="block sender">
-          <label data-i18n="doc.you">Votre entreprise / nom</label>
-          <textarea id="expediteur" rows="4">Jean Dupont
-12 rue de la Paix
-Casablanca
+        <div class="feature-grid">
+          <div class="feature"><div class="f-ico">📄</div><h3 data-i18n="feat.1.t">Factures & devis</h3><p data-i18n="feat.1.d">Passez d'un devis à une facture en 1 clic, avec numérotation automatique.</p></div>
+          <div class="feature"><div class="f-ico">🖨️</div><h3 data-i18n="feat.2.t">Export PDF</h3><p data-i18n="feat.2.d">Impression A4 impeccable ou enregistrement direct en PDF.</p></div>
+          <div class="feature"><div class="f-ico">🧮</div><h3 data-i18n="feat.3.t">TVA Maroc incluse</h3><p data-i18n="feat.3.d">20 %, 14 %, 10 %, 7 % ou exonéré : les calculs sont automatiques.</p></div>
+          <div class="feature"><div class="f-ico">💱</div><h3 data-i18n="feat.4.t">3 devises</h3><p data-i18n="feat.4.d">Dirham, Euro ou Dollar — parfait pour vos clients à l'étranger.</p></div>
+          <div class="feature"><div class="f-ico">🔒</div><h3 data-i18n="feat.5.t">100 % privé</h3><p data-i18n="feat.5.d">Aucune donnée n'est envoyée sur Internet. Tout reste sur votre appareil.</p></div>
+          <div class="feature"><div class="f-ico">🌍</div><h3 data-i18n="feat.6.t">Trilingue</h3><p data-i18n="feat.6.d">Français, Anglais, Espagnol pour facturer partout dans le monde.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ APPLICATION ============ -->
+    <section class="app-section" id="app">
+      <div class="container">
+        <h2 class="section-title no-print" data-i18n="app.title">Créez votre document</h2>
+
+        <div class="type-switch no-print">
+          <button id="btnDevis" class="active" onclick="setType('devis')" data-i18n="type.devis">Devis</button>
+          <button id="btnFacture" onclick="setType('facture')" data-i18n="type.facture">Facture</button>
+        </div>
+
+        <!-- ===== DOCUMENT MODIFIABLE ===== -->
+        <section class="paper" id="document">
+          <div class="doc-head">
+            <div class="block sender">
+              <label data-i18n="doc.you">Votre entreprise / nom</label>
+              <textarea id="expediteur" rows="4">Aoushek
+Casablanca, Maroc
 Tél / WhatsApp : 06 75 94 65 53
 aoushek@gmail.com</textarea>
-        </div>
+            </div>
+            <div class="block doctype">
+              <h2 id="docTitle">DEVIS</h2>
+              <p><span data-i18n="doc.num">N°</span> <input id="numero" type="text" value="DEV-2026-001" size="14"></p>
+              <p><span data-i18n="doc.date">Date</span> <input id="date" type="date"></p>
+            </div>
+          </div>
 
-        <div class="block doctype">
-          <h2 id="docTitle">DEVIS</h2>
-          <p><span data-i18n="doc.num">N°</span> <input id="numero" type="text" value="DEV-2026-001" size="14"></p>
-          <p><span data-i18n="doc.date">Date</span> <input id="date" type="date"></p>
-        </div>
-      </div>
-
-      <div class="block client">
-        <label data-i18n="doc.client">Client</label>
-        <textarea id="client" rows="4">Entreprise client
+          <div class="block client">
+            <label data-i18n="doc.client">Client</label>
+            <textarea id="client" rows="4">Entreprise client
 4 avenue des Champs
 75008 Paris</textarea>
-      </div>
+          </div>
 
-      <table class="lines">
-        <thead>
-          <tr>
-            <th data-i18n="col.desc">Désignation</th>
-            <th data-i18n="col.qty">Qté</th>
-            <th data-i18n="col.pu">P.U. HT</th>
-            <th data-i18n="col.tva">TVA %</th>
-            <th data-i18n="col.total">Total HT</th>
-            <th class="no-print"></th>
-          </tr>
-        </thead>
-        <tbody id="linesBody"></tbody>
-      </table>
-      <button class="add-line no-print" onclick="addLine()" data-i18n="lines.add">+ Ajouter une ligne</button>
+          <table class="lines">
+            <thead>
+              <tr>
+                <th data-i18n="col.desc">Désignation</th>
+                <th data-i18n="col.qty">Qté</th>
+                <th data-i18n="col.pu">P.U. HT</th>
+                <th data-i18n="col.tva">TVA %</th>
+                <th data-i18n="col.total">Total HT</th>
+                <th class="no-print"></th>
+              </tr>
+            </thead>
+            <tbody id="linesBody"></tbody>
+          </table>
+          <button class="add-line no-print" onclick="addLine()" data-i18n="lines.add">+ Ajouter une ligne</button>
 
-      <div class="totals">
-        <div class="row"><span data-i18n="tot.ht">Total HT</span><strong id="totalHT">0,00 DH</strong></div>
-        <div class="row"><span>TVA</span><strong id="totalTVA">0,00 DH</strong></div>
-        <div class="row grand"><span data-i18n="tot.ttc">Total TTC</span><strong id="totalTTC">0,00 DH</strong></div>
-      </div>
+          <div class="totals">
+            <div class="row"><span data-i18n="tot.ht">Total HT</span><strong id="totalHT">0,00 DH</strong></div>
+            <div class="row"><span>TVA</span><strong id="totalTVA">0,00 DH</strong></div>
+            <div class="row grand"><span data-i18n="tot.ttc">Total TTC</span><strong id="totalTTC">0,00 DH</strong></div>
+          </div>
 
-      <div class="block notes">
-        <label data-i18n="doc.notes">Conditions / notes</label>
-        <textarea id="notes" rows="2">Paiement à réception de facture – RIB : 011 579 0000012150000874 06</textarea>
+          <div class="block notes">
+            <label data-i18n="doc.notes">Conditions / notes</label>
+            <textarea id="notes" rows="2">Paiement à réception de facture – RIB : 011 579 0000012150000874 06</textarea>
+          </div>
+        </section>
+        <!-- ===== FIN DOCUMENT ===== -->
+
+        <div class="actions no-print">
+          <label class="select-box"><span data-i18n="act.currency">Devise</span>
+            <select id="currency" onchange="setCurrency(this.value)">
+              <option value="DH" selected>DH (Dirham)</option>
+              <option value="€">€ (Euro)</option>
+              <option value="$">$ (Dollar)</option>
+            </select>
+          </label>
+          <label class="select-box"><span data-i18n="act.tva">TVA</span>
+            <select id="tvaRate" onchange="setTvaAll(this.value)">
+              <option value="20" selected data-i18n="tva.20">20 % (normal)</option>
+              <option value="14" data-i18n="tva.14">14 %</option>
+              <option value="10" data-i18n="tva.10">10 %</option>
+              <option value="7" data-i18n="tva.7">7 %</option>
+              <option value="0" data-i18n="tva.0">0 % – Exonéré</option>
+            </select>
+          </label>
+          <button class="btn primary" onclick="window.print()" data-i18n="act.print">🖨️ PDF / Imprimer</button>
+          <button class="btn" onclick="saveLocal()" data-i18n="act.save">💾 Enregistrer</button>
+          <button class="btn" onclick="loadLocal()" data-i18n="act.open">📂 Ouvrir</button>
+          <button class="btn danger" onclick="resetDoc()" data-i18n="act.reset">♻️ Nouveau</button>
+        </div>
       </div>
     </section>
-    <!-- ===== FIN ZONE MODIFIABLE ===== -->
 
-    <section class="actions no-print">
-      <label class="currency-box"><span data-i18n="act.currency">Devise</span>
-        <select id="currency" onchange="setCurrency(this.value)">
-          <option value="DH" selected>DH (Dirham – Maroc)</option>
-          <option value="€">€ (Euro)</option>
-          <option value="$">$ (Dollar)</option>
-        </select>
-      </label>
-      <label class="currency-box"><span data-i18n="act.tva">TVA</span>
-        <select id="tvaRate" onchange="setTvaAll(this.value)">
-          <option value="20" selected data-i18n="tva.20">20 % (taux normal)</option>
-          <option value="14" data-i18n="tva.14">14 % (taux intermédiaire)</option>
-          <option value="10" data-i18n="tva.10">10 % (taux réduit)</option>
-          <option value="7" data-i18n="tva.7">7 % (taux réduit)</option>
-          <option value="0" data-i18n="tva.0">0 % – Exonéré / hors Maroc</option>
-        </select>
-      </label>
-      <button class="btn primary" onclick="window.print()" data-i18n="act.print">🖨️ Imprimer / Enregistrer en PDF</button>
-      <button class="btn" onclick="saveLocal()" data-i18n="act.save">💾 Enregistrer</button>
-      <button class="btn" onclick="loadLocal()" data-i18n="act.open">📂 Ouvrir</button>
-      <button class="btn danger" onclick="resetDoc()" data-i18n="act.reset">♻️ Nouveau document</button>
-    </section>
-
-    <!-- ===== SECTION TARIFS (monétisation) ===== -->
+    <!-- ============ TARIFS ============ -->
     <section class="pricing no-print" id="pricing">
-      <h2 data-i18n="price.title">Passez à la version PRO</h2>
-      <p class="price-sub" data-i18n="price.sub">Paiement simple et encaissement réel au Maroc 🇲🇦</p>
+      <div class="container">
+        <h2 class="section-title" data-i18n="price.title">Un prix simple et honnête</h2>
+        <p class="section-sub" data-i18n="price.sub">Commencez gratuitement. Passez au PRO quand vous êtes prêt. Paiement et encaissement 100 % au Maroc 🇲🇦</p>
 
-      <div class="price-cards">
-        <div class="card">
-          <h3 data-i18n="price.free.name">Gratuit</h3>
-          <div class="amount">0</div>
-          <ul>
-            <li data-i18n="price.f1">Devis & factures illimités</li>
-            <li data-i18n="price.f2">Export PDF</li>
-            <li data-i18n="price.f3">3 devises (DH, €, $)</li>
-          </ul>
-          <button class="btn" onclick="document.getElementById('document').scrollIntoView()" data-i18n="price.free.btn">Utiliser gratuitement</button>
-        </div>
+        <div class="price-cards">
+          <div class="card">
+            <h3 data-i18n="price.free.name">Gratuit</h3>
+            <div class="amount">0 <small>DH</small></div>
+            <p class="card-note" data-i18n="price.free.note">Pour toujours</p>
+            <ul>
+              <li data-i18n="price.f1">Devis & factures illimités</li>
+              <li data-i18n="price.f2">Export PDF</li>
+              <li data-i18n="price.f3">3 devises (DH, €, $)</li>
+              <li data-i18n="price.f4">TVA Maroc 20/14/10/7/0 %</li>
+            </ul>
+            <button class="btn" onclick="document.getElementById('app').scrollIntoView()" data-i18n="price.free.btn">Commencer gratuitement</button>
+          </div>
 
-        <div class="card featured">
-          <div class="badge" data-i18n="price.badge">POPULAIRE</div>
-          <h3>PRO</h3>
-          <div class="amount">49 DH<small data-i18n="price.month">/mois</small></div>
-          <ul>
-            <li data-i18n="price.p1">Logo & couleurs personnalisés</li>
-            <li data-i18n="price.p2">Clients enregistrés</li>
-            <li data-i18n="price.p3">Export PDF en lot</li>
-            <li data-i18n="price.p4">Support prioritaire</li>
-          </ul>
-          <button class="btn primary" onclick="openPay()">💳 <span data-i18n="price.pro.btn">Payer maintenant</span></button>
-        </div>
+          <div class="card featured">
+            <div class="badge" data-i18n="price.badge">⭐ LE PLUS CHOISI</div>
+            <h3>PRO</h3>
+            <div class="amount">49 <small>DH/mois</small></div>
+            <p class="card-note" data-i18n="price.pro.note">ou 490 DH/an (2 mois offerts)</p>
+            <ul>
+              <li data-i18n="price.p1">Tout le plan Gratuit</li>
+              <li data-i18n="price.p2">Logo & couleurs de votre marque</li>
+              <li data-i18n="price.p3">Clients enregistrés (gain de temps)</li>
+              <li data-i18n="price.p4">Export PDF en lot</li>
+              <li data-i18n="price.p5">Support prioritaire WhatsApp</li>
+            </ul>
+            <button class="btn primary" onclick="openPay()">💳 <span data-i18n="price.pro.btn">Payer maintenant</span></button>
+          </div>
 
-        <div class="card">
-          <h3>ENTREPRISE</h3>
-          <div class="amount">149 DH<small data-i18n="price.month">/mois</small></div>
-          <ul>
-            <li data-i18n="price.b1">Tout le PRO</li>
-            <li data-i18n="price.b2">Multi-utilisateurs (5)</li>
-            <li data-i18n="price.b3">API & intégrations</li>
-          </ul>
-          <button class="btn" onclick="openPay()" data-i18n="price.ent.btn">Contacter l'équipe</button>
+          <div class="card">
+            <h3>ENTREPRISE</h3>
+            <div class="amount">149 <small>DH/mois</small></div>
+            <p class="card-note" data-i18n="price.ent.note">Pour les équipes</p>
+            <ul>
+              <li data-i18n="price.b1">Tout le PRO</li>
+              <li data-i18n="price.b2">Jusqu'à 5 utilisateurs</li>
+              <li data-i18n="price.b3">Factures récurrentes</li>
+              <li data-i18n="price.b4">Formation offerte</li>
+            </ul>
+            <button class="btn" onclick="openPay()" data-i18n="price.ent.btn">Nous contacter</button>
+          </div>
         </div>
+        <p class="pay-note" data-i18n="price.note">✅ Encaissement au Maroc : virement BMCE · Cashplus · Wafacash · Payoneer (international)</p>
       </div>
-      <p class="pay-note" data-i18n="price.note">✅ Encaissement garanti au Maroc : CIH/Attijariwafa · Cashplus · Payoneer · Wafacash</p>
     </section>
 
-    <section class="help no-print" id="aide">
-      <h2 data-i18n="help.title">Comment ça marche ?</h2>
-      <ol>
-        <li data-i18n="help.s1">Remplissez vos informations et celles du client.</li>
-        <li data-i18n="help.s2">Ajoutez vos lignes (désignation, quantité, prix).</li>
-        <li data-i18n="help.s3">Cliquez sur « Imprimer », puis choisissez « Enregistrer en PDF ».</li>
-        <li data-i18n="help.s4">Envoyez le PDF à votre client. C'est prêt !</li>
-      </ol>
-      <p class="info" data-i18n="help.info">ℹ️ Aucune donnée n'est envoyée sur Internet : tout est stocké dans votre navigateur.</p>
+    <!-- ============ TÉMOIGNAGES ============ -->
+    <section class="testimonials no-print">
+      <div class="container">
+        <h2 class="section-title" data-i18n="test.title">Ils facturent déjà avec FacturFacile</h2>
+        <div class="testi-grid">
+          <div class="testi">
+            <div class="stars">★★★★★</div>
+            <p data-i18n="test.1">« J'ai créé ma première facture en 3 minutes. Simple et pro, exactement ce qu'il faut. »</p>
+            <div class="testi-author"><span class="avatar">Y</span> Yassine — <em data-i18n="test.1r">Développeur freelance, Casablanca</em></div>
+          </div>
+          <div class="testi">
+            <div class="stars">★★★★★</div>
+            <p data-i18n="test.2">« La TVA marocaine est déjà gérée, je n'ai plus à calculer à la main. Un vrai gain de temps. »</p>
+            <div class="testi-author"><span class="avatar">S</span> Salma — <em data-i18n="test.2r">Graphiste, Rabat</em></div>
+          </div>
+          <div class="testi">
+            <div class="stars">★★★★★</div>
+            <p data-i18n="test.3">« Mes clients à l'étranger paient en euros, et je peux facturer en 3 langues. Parfait. »</p>
+            <div class="testi-author"><span class="avatar">M</span> Mehdi — <em data-i18n="test.3r">Consultant, Marrakech</em></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="faq no-print" id="faq">
+      <div class="container">
+        <h2 class="section-title" data-i18n="faq.title">Questions fréquentes</h2>
+        <details><summary data-i18n="faq.q1">Est-ce vraiment gratuit ?</summary><p data-i18n="faq.a1">Oui. Le plan Gratuit est illimité et sans inscription. Vous ne payez que si vous voulez les options PRO.</p></details>
+        <details><summary data-i18n="faq.q2">Mes données sont-elles en sécurité ?</summary><p data-i18n="faq.a2">Absolument. Tout est calculé dans votre navigateur : aucune donnée n'est envoyée sur Internet.</p></details>
+        <details><summary data-i18n="faq.q3">La TVA marocaine est-elle gérée ?</summary><p data-i18n="faq.a3">Oui, les taux 20 %, 14 %, 10 %, 7 % et l'exonération 0 % (export) sont pris en charge automatiquement.</p></details>
+        <details><summary data-i18n="faq.q4">Comment payer l'abonnement PRO depuis le Maroc ?</summary><p data-i18n="faq.a4">Par virement BMCE, Cashplus ou Wafacash pour les clients locaux, et par Payoneer pour l'international.</p></details>
+        <details><summary data-i18n="faq.q5">Puis-je facturer des clients à l'étranger ?</summary><p data-i18n="faq.a5">Oui : choisissez la devise € ou $, la TVA 0 % (exonération export) et la langue de votre client.</p></details>
+      </div>
+    </section>
+
+    <!-- ============ CTA FINAL ============ -->
+    <section class="final-cta no-print">
+      <div class="container">
+        <h2 data-i18n="cta.title">Prêt à créer votre première facture ?</h2>
+        <p data-i18n="cta.sub">Gratuit, sans inscription, en 2 minutes.</p>
+        <a href="#app" class="btn primary big" data-i18n="cta.btn">Créer ma facture maintenant</a>
+      </div>
     </section>
 
   </main>
 
-  <!-- ===== MODALE DE PAIEMENT (encaissement Maroc) ===== -->
+  <!-- ============ MODALE DE PAIEMENT ============ -->
   <div class="pay-overlay no-print" id="payModal" onclick="if(event.target===this)closePay()">
     <div class="pay-box">
       <button class="pay-close" onclick="closePay()">✕</button>
-      <h3 id="payTitle">💳 <span data-i18n="pay.title">Choisissez votre moyen de paiement</span></h3>
+      <h3>💳 <span data-i18n="pay.title">Choisissez votre moyen de paiement</span></h3>
 
       <div class="pay-method">
         <div class="pay-icon">🏦</div>
         <div>
           <strong data-i18n="pay.m1">Virement bancaire (Maroc)</strong>
-          <p><span data-i18n="pay.m1d">Envoyez le montant sur le RIB suivant, puis envoyez la preuve :</span></p>
+          <p data-i18n="pay.m1d">Envoyez le montant sur le RIB suivant, puis envoyez la preuve :</p>
           <code id="ribDisplay">BMCE Bank of Africa – RIB : 011 579 0000012150000874 06</code>
           <button class="mini-btn" onclick="copyText('011579000001215000087406')" data-i18n="pay.copy">📋 Copier le RIB</button>
         </div>
@@ -196,15 +321,14 @@ aoushek@gmail.com</textarea>
       <div class="pay-method">
         <div class="pay-icon">🌐</div>
         <div>
-          <strong data-i18n="pay.m3">Payoneer (pour les clients internationaux)</strong>
-          <p data-i18n="pay.m3d">Les clients hors Maroc paient par Payoneer – l'argent arrive sur votre compte Payoneer, retrait au Maroc.</p>
+          <strong data-i18n="pay.m3">Payoneer (clients internationaux)</strong>
+          <p data-i18n="pay.m3d">Les clients hors Maroc paient par Payoneer, l'argent arrive sur votre compte, retrait au Maroc.</p>
           <a class="mini-btn" href="https://www.payoneer.com/register/" target="_blank" rel="noopener" data-i18n="pay.m3b">Ouvrir un compte Payoneer</a>
         </div>
       </div>
 
       <div class="pay-contact">
         <p data-i18n="pay.contact">📩 Une fois le paiement effectué, envoyez la preuve :</p>
-        <!-- ✏️ Numéro WhatsApp du vendeur -->
         <a class="btn primary" id="waLink" href="https://wa.me/212675946553" target="_blank" rel="noopener">📱 WhatsApp</a>
         <a class="btn" href="mailto:aoushek@gmail.com?subject=Paiement%20PRO%20FacturFacile" data-i18n="pay.mail">✉️ E-mail</a>
       </div>
@@ -212,15 +336,33 @@ aoushek@gmail.com</textarea>
     </div>
   </div>
 
+  <!-- ============ FOOTER ============ -->
   <footer class="site-footer no-print">
-    <div class="container">
-      <p class="footer-links">
-        <!-- 💰 MONÉTISATION : remplacez ces liens par VOS liens d'affiliation -->
+    <div class="container footer-grid">
+      <div>
+        <div class="logo">🧾 Factur<span>Facile</span></div>
+        <p data-i18n="footer.about">Le générateur de factures et devis le plus simple pour les freelances et TPE/PME au Maroc et dans le monde.</p>
+      </div>
+      <div>
+        <h4 data-i18n="footer.nav">Navigation</h4>
+        <a href="#features" data-i18n="nav.features">Fonctionnalités</a>
+        <a href="#pricing" data-i18n="nav.pricing">Tarifs</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      </div>
+      <div>
+        <h4 data-i18n="footer.contact">Contact</h4>
+        <a href="https://wa.me/212675946553" target="_blank" rel="noopener">📱 06 75 94 65 53</a>
+        <a href="mailto:aoushek@gmail.com">✉️ aoushek@gmail.com</a>
+        <span>🇲🇦 Casablanca, Maroc</span>
+      </div>
+      <div>
+        <h4 data-i18n="footer.partners">Partenaires</h4>
         <a href="https://www.hostinger.com/" rel="sponsored nofollow noopener" target="_blank">🌐 Hébergement web</a>
-        <a href="https://www.gandi.net/" rel="sponsored nofollow noopener" target="_blank">🔗 Nom de domaine</a>
         <a href="https://www.payoneer.com/" rel="sponsored nofollow noopener" target="_blank">💳 Payoneer</a>
-      </p>
-      <p>© 2026 FacturFacile – Free invoice & quote maker – Maroc 🇲🇦</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 FacturFacile — <span data-i18n="footer.rights">Tous droits réservés</span> — 🇲🇦 <span data-i18n="footer.made">Fait au Maroc</span></p>
     </div>
   </footer>
 
