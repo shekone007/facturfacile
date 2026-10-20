@@ -41,6 +41,19 @@ window.I18N = {
     'noSave': 'Aucun document sauvegardé.',
     'loaded': '📂 Document chargé.',
     'confirmNew': 'Créer un nouveau document ? Les modifications non enregistrées seront perdues.',
+    'pay.title': 'Choisissez votre moyen de paiement',
+    'pay.m1': 'Virement bancaire (Maroc)',
+    'pay.m1d': 'Envoyez le montant sur le RIB suivant, puis envoyez la preuve :',
+    'pay.copy': '📋 Copier le RIB',
+    'pay.m2': 'Cashplus / Wafacash / Western Union',
+    'pay.m2d': "Allez dans l'agence la plus proche, envoyez le montant, puis envoyez-nous le reçu (n° de transfert).",
+    'pay.m3': 'Payoneer (pour les clients internationaux)',
+    'pay.m3d': "Les clients hors Maroc paient par Payoneer – l'argent arrive sur votre compte Payoneer, retrait au Maroc.",
+    'pay.m3b': 'Ouvrir un compte Payoneer',
+    'pay.contact': '📩 Une fois le paiement effectué, envoyez la preuve :',
+    'pay.mail': '✉️ E-mail',
+    'pay.tip': '💡 Conservez toujours le reçu : il sert de facture.',
+    'pay.copied': '✅ RIB copié !',
   },
   en: {
     'nav.pro': 'Upgrade to PRO',
@@ -78,6 +91,19 @@ window.I18N = {
     'noSave': 'No saved document found.',
     'loaded': '📂 Document loaded.',
     'confirmNew': 'Create a new document? Unsaved changes will be lost.',
+    'pay.title': 'Choose your payment method',
+    'pay.m1': 'Bank transfer (Morocco)',
+    'pay.m1d': 'Send the amount to the RIB below, then send the proof:',
+    'pay.copy': '📋 Copy RIB',
+    'pay.m2': 'Cashplus / Wafacash / Western Union',
+    'pay.m2d': 'Go to the nearest agency, send the amount, then send us the receipt (transfer number).',
+    'pay.m3': 'Payoneer (for international clients)',
+    'pay.m3d': "Clients outside Morocco pay via Payoneer – money arrives on your Payoneer account, withdraw in Morocco.",
+    'pay.m3b': 'Open a Payoneer account',
+    'pay.contact': '📩 Once paid, send the proof:',
+    'pay.mail': '✉️ E-mail',
+    'pay.tip': '💡 Always keep the receipt: it serves as your invoice.',
+    'pay.copied': '✅ RIB copied!',
   },
   es: {
     'nav.pro': 'Pasar a la versión PRO',
@@ -115,6 +141,19 @@ window.I18N = {
     'noSave': 'No hay ningún documento guardado.',
     'loaded': '📂 Documento cargado.',
     'confirmNew': '¿Crear un nuevo documento? Los cambios no guardados se perderán.',
+    'pay.title': 'Elige tu medio de pago',
+    'pay.m1': 'Transferencia bancaria (Marruecos)',
+    'pay.m1d': 'Envía el importe al siguiente RIB y luego envía el comprobante:',
+    'pay.copy': '📋 Copiar RIB',
+    'pay.m2': 'Cashplus / Wafacash / Western Union',
+    'pay.m2d': 'Ve a la agencia más cercana, envía el importe y luego envíanos el recibo (nº de transferencia).',
+    'pay.m3': 'Payoneer (para clientes internacionales)',
+    'pay.m3d': 'Los clientes fuera de Marruecos pagan con Payoneer – el dinero llega a tu cuenta Payoneer, retiro en Marruecos.',
+    'pay.m3b': 'Abrir una cuenta Payoneer',
+    'pay.contact': '📩 Una vez pagado, envía el comprobante:',
+    'pay.mail': '✉️ Correo',
+    'pay.tip': '💡 Guarda siempre el recibo: sirve de factura.',
+    'pay.copied': '✅ ¡RIB copiado!',
   },
 };
 
@@ -274,6 +313,19 @@ function escapeHtml(s) {
   return String(s).replace(/[&<>"']/g, (c) => ({
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
   }[c]));
+}
+
+// ---------- Modale de paiement (encaissement Maroc) ----------
+function openPay() {
+  document.getElementById('payModal').classList.add('open');
+}
+function closePay() {
+  document.getElementById('payModal').classList.remove('open');
+}
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closePay(); });
+
+function copyText(txt) {
+  navigator.clipboard.writeText(txt).then(() => alert(t('pay.copied')));
 }
 
 // ---------- Démarrage ----------

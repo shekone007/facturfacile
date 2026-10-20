@@ -240,6 +240,74 @@ textarea:focus, input:focus { outline: 2px solid var(--blue); background: #fff; 
 }
 .pay-note { margin: 22px 0 0; color: #6b7280; font-size: 13px; }
 
+/* ---------- Modale de paiement ---------- */
+.pay-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(17,24,39,.65);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 16px;
+}
+.pay-overlay.open { display: flex; }
+.pay-box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 26px 24px;
+  max-width: 520px;
+  width: 100%;
+  max-height: 90vh;
+  overflow: auto;
+  position: relative;
+}
+.pay-box h3 { margin: 0 0 18px; }
+.pay-close {
+  position: absolute;
+  top: 12px; right: 12px;
+  border: none; background: var(--grey);
+  border-radius: 6px;
+  width: 32px; height: 32px;
+  cursor: pointer; font-size: 15px;
+}
+.pay-method {
+  display: flex;
+  gap: 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 14px;
+  margin-bottom: 12px;
+  background: #fafafa;
+}
+.pay-icon { font-size: 26px; }
+.pay-method p { margin: 6px 0; font-size: 13px; color: #6b7280; }
+.pay-method code {
+  display: block;
+  background: #eef2ff;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  word-break: break-all;
+  margin-bottom: 8px;
+}
+.mini-btn {
+  display: inline-block;
+  border: 1px solid var(--blue);
+  color: var(--blue);
+  background: #fff;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.mini-btn:hover { background: #eff6ff; }
+.pay-contact { text-align: center; margin: 18px 0 6px; }
+.pay-contact p { font-size: 14px; }
+.pay-contact .btn { margin: 4px; }
+.pay-tip { text-align: center; color: #6b7280; font-size: 12px; }
+
 @media (max-width: 640px) {
   .card.featured { transform: none; }
 }

@@ -40,12 +40,7 @@ se fait par **chèque ou virement** (dès 100 $). Créez le compte sur https://a
 avec ce site : `https://shekone007.github.io/facturfacile/`.
 
 ### Étape 3 – Encaisser ses revenus AU MAROC
-| Moyen | Usage |
-|---|---|
-| **Payoneer** ✅ | Recommandé : reçu des affiliations et clients internationaux, retrait aux guichets au Maroc ou carte Mastercard |
-| **Virement bancaire** (CIH, Attijariwafa, BMCE) | Pour Adense et clients locaux |
-| **Western Union / MoneyGram** | Paiements ponctuels de clients |
-| ❌ PayPal | Très limité au Maroc : ne comptez pas dessus |
+Voir le tableau complet dans la section « 💰 Encaisser l'argent AU MAROC » plus bas ✅
 
 ### Étape 4 – Version PRO payante (revenus récurrents 🚀)
 - **Gumroad / Payhip** : vendent la licence PRO à votre place (leurs liens marchent au Maroc)
@@ -58,35 +53,50 @@ avec ce site : `https://shekone007.github.io/facturfacile/`.
 - LinkedIn + Reddit (r/Maroc) + WhatsApp Business
 - La TVA au Maroc est passée à **20 %** par défaut (déjà le réglage par défaut ici ✅)
 
-## 🌍 Vendre à l'INTERNATIONNAL depuis le Maroc
+## 💰 Encaisser l'argent AU MAROC – seuls les moyens qui marchent ✅
 
-Le site est **trilingue (🇫🇷 FR / 🇬🇧 EN / 🇪🇸 ES)** → vos 3 marchés :
-francophone (Maroc, France, Afrique), anglophone (monde entier), hispanophone (Amérique latine, Espagne).
+> ⚠️ Règle d'or : **aucun moyen de paiement sans retrait possible au Maroc.**
 
-### Où encaisser les paiements internationaux (depuis le Maroc)
-| Plateforme | Avantage | Payout vers le Maroc |
-|---|---|---|
-| **Payoneer** ✅✅ | Le standard au Maroc : reçoit USD/EUR/GBP comme un compte bancaire US/UE | Retrait guichet + carte Mastercard |
-| **Paddle** ✅ | Vendeur "marchand" : gère TVA/impôts à votre place pour vous | Virement (Wire) → compte Payoneer |
-| **Gumroad** ✅ | Zéro code : ils vendent la licence PRO à votre place | PayPal (limité) / virement |
-| **Stripe Atlas** ⭐ | Crée une société US ($500 une fois) → vendre partout | Nécessite un compte US (Mercury) |
+| Moyen ✅ | Comment l'argent arrive au Maroc |
+|---|---|
+| **Virement bancaire RIB** (CIH, Attijariwafa, BMCE, CIH Pay) | Direct sur votre compte marocain |
+| **Cashplus / Wafacash / Western Union** | Retrait en espèces dans l'agence, même sans compte bancaire |
+| **Payoneer** | L'argent arrive en $/€, retrait sur votre banque marocaine ou carte |
+| **Moroccan Cash Plus (COD)** | Pour les produits livrés |
 
-### Plan d'action concret (par ordre)
-1. **Créez Payoneer** (gratuit) → payoneer.com → sert de banque universelle
-2. **Publiez la version PRO sur Paddle ou Gumroad** (gratuit à l'inscription, commission ~5 %)
-3. **Collez le lien de paiement** dans `index.html` → recherchez `💰 Remplacez # par votre lien`
-4. **Déposez le site sur :**
-   - **Product Hunt** (tech, États-Unis) → explosif pour le trafic
-   - **Gumroad Discover** (place de marché gratuite)
-   - **Reddit** : r/SideProject, r/Entrepreneur, r/freelance
-   - **Facebook Groups** : freelances Maroc / France / Afrique
-5. **SEO international** : article anglais *« free invoice generator »* (marché énorme)
+### ❌ Moyens à ÉVITER depuis le Maroc
+| Moyen | Pourquoi |
+|---|---|
+| PayPal | Compte marocain très limité : pas de retrait facile |
+| Wise | Maroc non supporté |
+| Stripe (direct) | Non disponible au Maroc |
+| Amazon Associates | Programme fermé au Maroc |
 
-### Conseils Maroc ↔ International
-- Prix internationaux en **$** (rassure l'acheteur) : 4,90 $/mois ≈ 49 DH ✅
-- Factures clients étrangers : **TVA 0 %** (autoliquidation hors Maroc) 🇲🇦
-- Un client étranger qui paie 4,90 $ vous revient à ~49 DH via Payoneer (frais ~1 %)
-- Objectif réaliste : **100 clients PRO = ~2 400 DH/mois récurrents** 💪
+### Le système déjà intégré dans votre site ✅
+Le bouton **« Payer maintenant »** affiche un modale avec :
+- votre **RIB** (bouton copier)
+- **Cashplus / Wafacash** pour les clients sans banque
+- **Payoneer** pour les clients internationaux
+- **WhatsApp + e-mail** pour envoyer la preuve de paiement
+
+✏️ **À personnaliser (5 min) :** dans `index.html`, remplacez :
+- `000 000000 000000000000 00` → votre vrai RIB CIH/Attijariwafa
+- `000000000000000` → votre **ICE** (relevé d'identité entrepreneur)
+- `212600000000` (WhatsApp) → votre numéro
+- `contact@monsite.fr` → votre e-mail
+
+### Plan d'action gagnant (Maroc d'abord, international ensuite)
+1. **Personnalisez** vos coordonnées de paiement dans `index.html` (voir ci-dessus)
+2. **Créez Payoneer** (gratuit) → pour les clients hors Maroc : payoneer.com/register
+3. **Testez** : payez-vous 49 DH avec un ami via Cashplus → tout fonctionne ✅
+4. **Vendez localement** : groupes Facebook freelances Maroc, WhatsApp Business, LinkedIn Maroc
+5. **Vendez à l'international** : les clients étrangers paient par Payoneer, vous retirez au Maroc
+6. **Élargissez** : Paddle (gère la TVA pour vous, paie par virement → Payoneer)
+
+### Facturation au Maroc
+- Facture obligatoire : **ICE**, RIB, numéro IF/RC
+- TVA : 20 % (le logiciel est déjà réglé dessus ✅)
+- Clients étrangers : TVA **0 %** (autoliquidation hors Maroc)
 
 ## ⚠️ À savoir
 Aucune application ne gagne de l'argent automatiquement : le revenu vient du **trafic**.

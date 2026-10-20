@@ -106,7 +106,7 @@ contact@monsite.fr</textarea>
     <!-- ===== SECTION TARIFS (monétisation) ===== -->
     <section class="pricing no-print" id="pricing">
       <h2 data-i18n="price.title">Passez à la version PRO</h2>
-      <p class="price-sub" data-i18n="price.sub">Paiement international sécurisé – Payoneer, carte bancaire ou virement.</p>
+      <p class="price-sub" data-i18n="price.sub">Paiement simple et encaissement réel au Maroc 🇲🇦</p>
 
       <div class="price-cards">
         <div class="card">
@@ -123,29 +123,28 @@ contact@monsite.fr</textarea>
         <div class="card featured">
           <div class="badge" data-i18n="price.badge">POPULAIRE</div>
           <h3>PRO</h3>
-          <div class="amount">4,90 $<small data-i18n="price.month">/mois</small></div>
+          <div class="amount">49 DH<small data-i18n="price.month">/mois</small></div>
           <ul>
             <li data-i18n="price.p1">Logo & couleurs personnalisés</li>
             <li data-i18n="price.p2">Clients enregistrés</li>
             <li data-i18n="price.p3">Export PDF en lot</li>
             <li data-i18n="price.p4">Support prioritaire</li>
           </ul>
-          <!-- 💰 Remplacez # par votre lien Gumroad / Paddle / PayPal -->
-          <button class="btn primary" onclick="alert(window.I18N[lang].paySoon)" id="btnPro">🚀 <span data-i18n="price.pro.btn">S'abonner</span></button>
+          <button class="btn primary" onclick="openPay()">💳 <span data-i18n="price.pro.btn">Payer maintenant</span></button>
         </div>
 
         <div class="card">
           <h3>ENTREPRISE</h3>
-          <div class="amount">14,90 $<small data-i18n="price.month">/mois</small></div>
+          <div class="amount">149 DH<small data-i18n="price.month">/mois</small></div>
           <ul>
             <li data-i18n="price.b1">Tout le PRO</li>
             <li data-i18n="price.b2">Multi-utilisateurs (5)</li>
             <li data-i18n="price.b3">API & intégrations</li>
           </ul>
-          <button class="btn" onclick="alert(window.I18N[lang].paySoon)" data-i18n="price.ent.btn">Contacter l'équipe</button>
+          <button class="btn" onclick="openPay()" data-i18n="price.ent.btn">Contacter l'équipe</button>
         </div>
       </div>
-      <p class="pay-note" data-i18n="price.note">💡 Depuis le Maroc : Payoneer · CIH Pay · Western Union · Virement international</p>
+      <p class="pay-note" data-i18n="price.note">✅ Encaissement garanti au Maroc : CIH/Attijariwafa · Cashplus · Payoneer · Wafacash</p>
     </section>
 
     <section class="help no-print" id="aide">
@@ -160,6 +159,49 @@ contact@monsite.fr</textarea>
     </section>
 
   </main>
+
+  <!-- ===== MODALE DE PAIEMENT (encaissement Maroc) ===== -->
+  <div class="pay-overlay no-print" id="payModal" onclick="if(event.target===this)closePay()">
+    <div class="pay-box">
+      <button class="pay-close" onclick="closePay()">✕</button>
+      <h3 id="payTitle">💳 <span data-i18n="pay.title">Choisissez votre moyen de paiement</span></h3>
+
+      <div class="pay-method">
+        <div class="pay-icon">🏦</div>
+        <div>
+          <strong data-i18n="pay.m1">Virement bancaire (Maroc)</strong>
+          <p><span data-i18n="pay.m1d">Envoyez le montant sur le RIB suivant, puis envoyez la preuve :</span></p>
+          <code id="ribDisplay">CIH Bank – RIB : 000 000000 000000000000 00 – ICE : 000000000000000</code>
+          <button class="mini-btn" onclick="copyText('000 000000 000000000000 00')" data-i18n="pay.copy">📋 Copier le RIB</button>
+        </div>
+      </div>
+
+      <div class="pay-method">
+        <div class="pay-icon">🏪</div>
+        <div>
+          <strong data-i18n="pay.m2">Cashplus / Wafacash / Western Union</strong>
+          <p data-i18n="pay.m2d">Allez dans l'agence la plus proche, envoyez le montant, puis envoyez-nous le reçu (n° de transfert).</p>
+        </div>
+      </div>
+
+      <div class="pay-method">
+        <div class="pay-icon">🌐</div>
+        <div>
+          <strong data-i18n="pay.m3">Payoneer (pour les clients internationaux)</strong>
+          <p data-i18n="pay.m3d">Les clients hors Maroc paient par Payoneer – l'argent arrive sur votre compte Payoneer, retrait au Maroc.</p>
+          <a class="mini-btn" href="https://www.payoneer.com/register/" target="_blank" rel="noopener" data-i18n="pay.m3b">Ouvrir un compte Payoneer</a>
+        </div>
+      </div>
+
+      <div class="pay-contact">
+        <p data-i18n="pay.contact">📩 Une fois le paiement effectué, envoyez la preuve :</p>
+        <!-- ✏️ REMPLACEZ le numéro par le vôtre (format international, ex : 212600000000) -->
+        <a class="btn primary" id="waLink" href="https://wa.me/212600000000" target="_blank" rel="noopener">📱 WhatsApp</a>
+        <a class="btn" href="mailto:contact@monsite.fr?subject=Paiement%20PRO%20FacturFacile" data-i18n="pay.mail">✉️ E-mail</a>
+      </div>
+      <p class="pay-tip" data-i18n="pay.tip">💡 Conservez toujours le reçu : il sert de facture.</p>
+    </div>
+  </div>
 
   <footer class="site-footer no-print">
     <div class="container">
