@@ -196,6 +196,36 @@ textarea:focus, input:focus, select:focus { outline: none; border-color: var(--b
 .btn.danger:hover { background: #fef2f2; }
 .btn.big { padding: 16px 32px; font-size: 17px; }
 
+/* ============ SERVICE DE FACTURATION ============ */
+.service { padding: 80px 0; background: var(--grey-light); }
+.service-box {
+  display: grid; grid-template-columns: 1.3fr 1fr; gap: 40px; align-items: center;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  border-radius: 20px; padding: 44px; color: #fff; box-shadow: var(--shadow-lg);
+}
+.service-tag {
+  display: inline-block; background: rgba(37,99,235,.25); color: #93c5fd;
+  padding: 7px 15px; border-radius: 30px; font-size: 13px; font-weight: 600; margin-bottom: 18px;
+}
+.service-text h2 { font-size: 30px; color: #fff; margin-bottom: 14px; }
+.service-text > p { color: #cbd5e1; font-size: 16px; margin-bottom: 20px; }
+.service-list { list-style: none; margin-bottom: 22px; }
+.service-list li { color: #e2e8f0; font-size: 15px; padding: 6px 0; }
+.service-price { margin-bottom: 24px; display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.service-price span { color: #94a3b8; font-size: 14px; }
+.service-price strong { font-size: 34px; font-weight: 800; color: #10b981; }
+.service-text .btn.primary { background: #10b981; border-color: #10b981; }
+.service-text .btn.primary:hover { background: #059669; box-shadow: 0 8px 24px rgba(16,185,129,.4); }
+.service-visual { text-align: center; }
+.srv-ico { font-size: 90px; margin-bottom: 22px; }
+.srv-stats { display: flex; flex-direction: column; gap: 14px; }
+.srv-stats div {
+  background: rgba(255,255,255,.07); border-radius: 12px; padding: 14px 18px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.srv-stats strong { font-size: 20px; color: #fff; }
+.srv-stats span { color: #94a3b8; font-size: 13px; }
+
 /* ============ TARIFS ============ */
 .pricing { padding: 80px 0; }
 .price-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: start; }
@@ -328,6 +358,7 @@ textarea:focus, input:focus, select:focus { outline: none; border-color: var(--b
   .hero-visual { margin-top: 30px; }
   .feature-grid, .price-cards, .testi-grid { grid-template-columns: 1fr 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
+  .service-box { grid-template-columns: 1fr; }
   .card.featured { transform: none; }
 }
 @media (max-width: 640px) {
