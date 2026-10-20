@@ -18,6 +18,10 @@ window.I18N = {
     'lines.add': '+ Ajouter une ligne',
     'tot.ht': 'Total HT', 'tot.ttc': 'Total TTC',
     'act.currency': 'Devise', 'act.print': '🖨️ Imprimer / Enregistrer en PDF',
+    'act.tva': 'TVA',
+    'tva.20': '20 % (taux normal)', 'tva.14': '14 % (taux intermédiaire)',
+    'tva.10': '10 % (taux réduit)', 'tva.7': '7 % (taux réduit)',
+    'tva.0': '0 % – Exonéré / hors Maroc',
     'act.save': '💾 Enregistrer', 'act.open': '📂 Ouvrir', 'act.reset': '♻️ Nouveau document',
     'price.title': 'Passez à la version PRO',
     'price.sub': 'Paiement international sécurisé – Payoneer, carte bancaire ou virement.',
@@ -68,6 +72,10 @@ window.I18N = {
     'lines.add': '+ Add line',
     'tot.ht': 'Subtotal', 'tot.ttc': 'Grand total',
     'act.currency': 'Currency', 'act.print': '🖨️ Print / Save as PDF',
+    'act.tva': 'VAT',
+    'tva.20': '20 % (standard rate)', 'tva.14': '14 % (intermediate rate)',
+    'tva.10': '10 % (reduced rate)', 'tva.7': '7 % (reduced rate)',
+    'tva.0': '0 % – Exempt / outside Morocco',
     'act.save': '💾 Save', 'act.open': '📂 Open', 'act.reset': '♻️ New document',
     'price.title': 'Upgrade to PRO',
     'price.sub': 'Secure international payment – card, Payoneer or bank transfer.',
@@ -118,6 +126,10 @@ window.I18N = {
     'lines.add': '+ Añadir línea',
     'tot.ht': 'Total sin imp.', 'tot.ttc': 'Total con imp.',
     'act.currency': 'Moneda', 'act.print': '🖨️ Imprimir / Guardar en PDF',
+    'act.tva': 'IVA',
+    'tva.20': '20 % (tipo general)', 'tva.14': '14 % (tipo intermedio)',
+    'tva.10': '10 % (tipo reducido)', 'tva.7': '7 % (tipo reducido)',
+    'tva.0': '0 % – Exento / fuera de Marruecos',
     'act.save': '💾 Guardar', 'act.open': '📂 Abrir', 'act.reset': '♻️ Nuevo documento',
     'price.title': 'Pasa a la versión PRO',
     'price.sub': 'Pago internacional seguro – tarjeta, Payoneer o transferencia.',
@@ -206,8 +218,15 @@ function setType(type) {
   document.getElementById('btnFacture').classList.toggle('active', type === 'facture');
 }
 
+// ---------- TVA : appliquer un taux à toutes les lignes ----------
+function setTvaAll(v) {
+  document.querySelectorAll('.i-tva').forEach((i) => (i.value = v));
+  calc();
+}
+
 // ---------- Lignes du tableau ----------
-function addLine(desc = '', qty = 1, pu = 0, tva = 20) {
+function addLine(desc = '', qty = 1, pu = 0, tva = null) {
+  if (tva === null) tva = document.getElementById('tvaRate').value;
   const tbody = document.getElementById('linesBody');
   const tr = document.createElement('tr');
 

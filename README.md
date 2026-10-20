@@ -95,8 +95,8 @@ Le bouton **« Payer maintenant »** affiche un modale avec :
 
 ### Facturation au Maroc
 - Facture obligatoire : **RIB** (et **ICE** dès que vous l'aurez – voir guide ci-dessous)
-- TVA : 20 % (le logiciel est déjà réglé dessus ✅)
-- Clients étrangers : TVA **0 %** (autoliquidation hors Maroc)
+- **TVA sélectionnable** dans l'application : 20 % (normal), 14 %, 10 %, 7 %, ou **0 % exonéré** (export/hors Maroc) ✅
+- Clients étrangers : TVA **0 %** (autoliquidation hors Maroc) → choisissez « 0 % – Exonéré / hors Maroc »
 
 ## 🪪 Obtenir son ICE GRATUITEMENT (5 minutes)
 
