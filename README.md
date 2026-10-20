@@ -81,9 +81,9 @@ Le bouton **« Payer maintenant »** affiche un modale avec :
 
 ✏️ **À personnaliser (5 min) :** dans `index.html`, remplacez :
 - `000 000000 000000000000 00` → votre vrai RIB CIH/Attijariwafa
-- `000000000000000` → votre **ICE** (relevé d'identité entrepreneur)
 - `212600000000` (WhatsApp) → votre numéro
 - `contact@monsite.fr` → votre e-mail
+- L'ICE est **facultatif** pour l'instant : ajoutez-le dès que vous l'aurez obtenu (gratuit, voir plus bas)
 
 ### Plan d'action gagnant (Maroc d'abord, international ensuite)
 1. **Personnalisez** vos coordonnées de paiement dans `index.html` (voir ci-dessus)
@@ -94,9 +94,35 @@ Le bouton **« Payer maintenant »** affiche un modale avec :
 6. **Élargissez** : Paddle (gère la TVA pour vous, paie par virement → Payoneer)
 
 ### Facturation au Maroc
-- Facture obligatoire : **ICE**, RIB, numéro IF/RC
+- Facture obligatoire : **RIB** (et **ICE** dès que vous l'aurez – voir guide ci-dessous)
 - TVA : 20 % (le logiciel est déjà réglé dessus ✅)
 - Clients étrangers : TVA **0 %** (autoliquidation hors Maroc)
+
+## 🪪 Obtenir son ICE GRATUITEMENT (5 minutes)
+
+L'ICE (Identifiant Commun de l'Entrepreneur) est **obligatoire** pour facturer au Maroc,
+mais il s'obtient **gratuitement et en ligne** auprès des impôts :
+
+### Méthode 1 – En ligne (la plus rapide, si vous avez un IF)
+1. Allez sur **www.tax.gov.ma**
+2. Cliquez sur **« Espace particuliers / Espace entreprises »** → **Créer un compte**
+3. Connectez-vous avec votre **CIN** + votre **Identifiant Fiscal (IF)**
+4. Menu **« Relevé d'identité entrepreneur »** ou **« ICE »** → **Générer**
+5. ✅ Votre ICE s'affiche immédiatement (14 chiffres) → notez-le
+
+### Méthode 2 – Sans Identifiant Fiscal
+1. Déclarez-vous d'abord comme **auto-entrepreneur** (gratuit) :
+   - **Portal Auto-entrepreneur** : https://www.simplifie.urssaf.fr (ou Centre de formalités des entreprises – CFE)
+   - ou **Maroc PME** : www.mocco.com (chambre de commerce)
+2. Vous recevez un **IF** (Identifiant Fiscal) sous quelques jours
+3. Puis générez votre **ICE** sur tax.gov.ma (méthode 1)
+
+### À retenir
+- 💰 **Coût total : 0 DH** (l'ICE est gratuit, méfiez-vous des intermédiaires qui le vendent)
+- ⏱️ Délai : **immédiat en ligne** (si IF déjà déclaré) à **quelques jours**
+- 🧾 En attendant, vos factures restent valides avec votre **nom + RIB + téléphone**
+- ✅ Dès que vous l'aurez, ajoutez-le dans `index.html` : recherchez `RIB :` et ajoutez `– ICE : votre_numéro`
+
 
 ## ⚠️ À savoir
 Aucune application ne gagne de l'argent automatiquement : le revenu vient du **trafic**.
