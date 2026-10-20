@@ -1,7 +1,7 @@
 # 📘 GUIDE FACEBOOK COMPLET — Facturation Pro Maroc
 
 > Tout est prêt à copier-coller. Suivez dans l'ordre.
-> WhatsApp : **06 75 94 65 53** · E-mail : **aoushek@gmail.com**
+> WhatsApp : **06 02 16 68 76** · E-mail : **aoushek@gmail.com**
 > Site : **https://shekone007.github.io/facturfacile/**
 
 ---
@@ -23,7 +23,7 @@
 🧾 Factures & devis professionnels pour freelances, artisans et TPE/PME au Maroc.
 ✅ Réalisés en 2 minutes · ✅ TVA marocaine incluse · ✅ PDF prêt à envoyer
 💵 50 DH la facture · Pack 5 documents : 200 DH
-📲 Commandez sur WhatsApp : 06 75 94 65 53
+📲 Commandez sur WhatsApp : 06 02 16 68 76
 🌐 https://shekone007.github.io/facturfacile/
 ```
 5. Photo de profil : utilisez **visuel-1-presentation.png** recadré, ou une image verte/jaune
@@ -31,7 +31,7 @@
 
 ## 1.3 Compléter la page
 - **Site web** : https://shekone007.github.io/facturfacile/
-- **WhatsApp** : +212675946553
+- **WhatsApp** : +212602166876
 - **E-mail** : aoushek@gmail.com
 - **Pays/Ville** : Maroc / votre ville
 - **Bouton d'action** : « Envoyer un message WhatsApp »
@@ -64,7 +64,7 @@ Ne perdez plus votre temps avec Word ou Excel !
 
 💵 50 DH seulement — ou Pack 5 = 200 DH
 
-📲 Écrivez-moi sur WhatsApp : 06 75 94 65 53
+📲 Écrivez-moi sur WhatsApp : 06 02 16 68 76
 🌐 Ou essayez gratuitement : https://shekone007.github.io/facturfacile/
 
 Partagez à un artisan ou freelance qui en a besoin 🙏
@@ -82,7 +82,7 @@ J'ai mis en ligne un outil qui crée vos factures et devis en 2 minutes :
 👉 https://shekone007.github.io/facturfacile/
 
 Si vous préférez qu'on le fasse pour vous, écrivez-moi :
-📲 WhatsApp 06 75 94 65 53
+📲 WhatsApp 06 02 16 68 76
 ```
 > 💡 Ce post attire du monde car il donne quelque chose gratuitement. C'est le plus efficace pour se faire connaître.
 
@@ -101,7 +101,7 @@ Une erreur de taux = une facture non conforme. 😰
 Notre outil calcule tout automatiquement :
 👉 https://shekone007.github.io/facturfacile/
 
-Besoin d'aide ? 📲 06 75 94 65 53
+Besoin d'aide ? 📲 06 02 16 68 76
 ```
 
 ## 📅 JEUDI — Témoignage / preuve sociale
@@ -114,7 +114,7 @@ C'est exactement ce que je propose :
 ⏱️ Prêt en 2 minutes
 💰 50 DH seulement
 
-📲 WhatsApp : 06 75 94 65 53
+📲 WhatsApp : 06 02 16 68 76
 ```
 > ⚠️ N'inventez pas de faux clients. Remplacez par un vrai retour dès que vous en avez un. En attendant, mettez ce post plus tard.
 
@@ -129,7 +129,7 @@ C'est exactement ce que je propose :
 ✅ TVA marocaine incluse
 ✅ PDF prêts à envoyer
 
-📲 Réservez votre pack : 06 75 94 65 53
+📲 Réservez votre pack : 06 02 16 68 76
 ```
 
 ## 📅 SAMEDI — Ciblage artisans/commerçants
@@ -145,7 +145,7 @@ Je vous les fais pour vous :
 
 💰 À partir de 50 DH
 
-📲 Envoyez-moi un message : 06 75 94 65 53
+📲 Envoyez-moi un message : 06 02 16 68 76
 ```
 
 ## 📅 DIMANCHE — Appel à l'action
@@ -157,7 +157,7 @@ Il vous reste des factures à faire pour ce mois ?
 ⏱️ Je vous les prépare en 2 minutes
 💵 50 DH la facture · Pack 5 = 200 DH
 
-📲 WhatsApp : 06 75 94 65 53
+📲 WhatsApp : 06 02 16 68 76
 🌐 Gratuit sur le site : https://shekone007.github.io/facturfacile/
 ```
 
@@ -221,7 +221,7 @@ Merci beaucoup pour votre confiance 🙏
 
 N'hésitez pas à me solliciter pour vos prochaines factures — et si le service vous plaît, parlez-en à un collègue 😊
 
-📲 06 75 94 65 53
+📲 06 02 16 68 76
 ```
 
 ---

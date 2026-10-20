@@ -9,7 +9,7 @@
 - [x] Application créée (devis/factures, TVA, PDF)
 - [x] Site en ligne gratuitement (GitHub Pages)
 - [x] Trilingue FR / EN / ES
-- [x] Coordonnées intégrées : BMCE · WhatsApp 06 75 94 65 53 · aoushek@gmail.com
+- [x] Coordonnées intégrées : BMCE · WhatsApp 06 02 16 68 76 · aoushek@gmail.com
 - [x] Modale de paiement (RIB BMCE · Cashplus · Payoneer)
 - [x] Landing page professionnelle (tarifs, témoignages, FAQ)
 

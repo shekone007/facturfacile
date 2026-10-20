@@ -54,10 +54,10 @@ Beaucoup de freelances, artisans et petits commerçants marocains :
 >
 > Envoyez-moi juste : votre nom, le client, et les produits/services 👉 je m'occupe du reste.
 >
-> 📞 WhatsApp : 06 75 94 65 53
+> 📞 WhatsApp : 06 02 16 68 76
 
 ### Version courte (statut WhatsApp / story)
-> 🧾 Besoin d'une facture pro ? 50 DH, prête en 2 minutes, TVA incluse. WhatsApp 06 75 94 65 53
+> 🧾 Besoin d'une facture pro ? 50 DH, prête en 2 minutes, TVA incluse. WhatsApp 06 02 16 68 76
 
 ---
 
